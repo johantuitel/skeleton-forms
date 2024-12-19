@@ -1,0 +1,22 @@
+:host {
+  display: block;
+}
+
+.form-field {
+  margin: 0.1rem 0 0.1rem 0;
+}
+
+.form-field-label {
+  display: inline-block;
+  width: 11rem;
+  text-align: left;
+  margin-right: 10px;
+}
+
+.form-field-input {
+  width: 10rem;
+
+  &.is-disabled {
+    background-color: lightgray;
+  }
+}

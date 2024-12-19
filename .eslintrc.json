@@ -1,0 +1,122 @@
+{
+  "root": true,
+  "plugins": ["header", "jsdoc", "@typescript-eslint"],
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates",
+        "plugin:jsdoc/recommended-typescript"
+      ],
+      "rules": {
+        "arrow-body-style": "error",
+        "object-curly-newline": "error",
+        "header/header": [
+          2,
+          "line",
+          {
+            "pattern": "Copyright \\(c\\) \\d{4} Skeleton Company. All Rights Reserved.",
+            "template": " Copyright (c) 2024 Skeleton Company. All Rights Reserved."
+          }
+        ],
+        "jsdoc/require-jsdoc": [
+          "warn",
+          {
+            "publicOnly": true,
+            "require": {
+              "MethodDefinition": true, // Enable requirement for methods
+              "FunctionDeclaration": true, // Enable requirement for functions
+              "ArrowFunctionExpression": true, // Enable requirement for arrow functions
+              "ClassDeclaration": true,
+              "ClassExpression": true,
+              "FunctionExpression": true
+            },
+            "contexts": [
+              "TSInterfaceDeclaration",
+              "TSEnumDeclaration",
+              "TSTypeAliasDeclaration",
+              "TSPropertySignature"
+            ]
+          }
+        ],
+        "jsdoc/require-description": [
+          "warn",
+          {
+            "contexts": ["any"]
+          }
+        ],
+        "no-restricted-imports": [
+          "error",
+          {
+            "patterns": [
+              {
+                "group": ["src/*"],
+                "message": "Imports should use releative paths, not absolute paths"
+              },
+              {
+                "group": ["client-api/*"],
+                "message": "Please import directly from the 'client-api' instead"
+              }
+            ]
+          }
+        ],
+        "prefer-const":"error",
+        "yoda":"error",
+        "prefer-object-spread": "error",
+        "@typescript-eslint/consistent-type-imports": "error",
+        "@typescript-eslint/no-unused-vars": [
+          "error",
+          {
+            "argsIgnorePattern": "_"
+          }
+        ],
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "scs",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "scs",
+            "style": "kebab-case"
+          }
+        ],
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "selector": "interface",
+            "format": ["PascalCase"],
+            "custom": {
+              "regex": "^I[A-Z]",
+              "match": true
+            }
+          },
+          {
+            "selector": "enum",
+            "format": ["PascalCase"],
+            "custom": {
+              "regex": "^E[A-Z]",
+              "match": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "files": ["*.html"],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended",
+        "plugin:@angular-eslint/template/accessibility"
+      ],
+      "rules": {}
+    }
+  ]
+}

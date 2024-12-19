@@ -1,0 +1,17 @@
+<div class="form-field">
+    <label [for]="id" class="form-field-label">
+        {{label}}{{!required ? '(optional)' : ''}}
+    </label>
+    <select
+        [attr.id]="id ? id : null"
+        [(ngModel)]="value"
+        (change)="onChange(value)"
+        [attr.disabled]="disabled ? disabled : null"
+        [attr.required]="required ? required : null"
+        class="form-select {{disabled ? 'is-disabled' : ''}}">
+        <option value="">{{firstOption}}</option>
+        @for (option of options; track $index) {
+            <option [value]="option.value" [selected]="value === option.value">{{option.label}}</option>
+        }
+    </select>
+</div>

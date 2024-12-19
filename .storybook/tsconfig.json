@@ -1,0 +1,15 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "types": ["node"],
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true
+  },
+  "exclude": [
+    "../projects/skeleton-forms/**/*.spec.ts",
+  ],
+  "include": [
+    "../projects/skeleton-forms/**/*",
+  ],
+  "files": ["./typings.d.ts"]
+}

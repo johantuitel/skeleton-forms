@@ -1,0 +1,20 @@
+<div class="form-field direction-{{direction}}">
+    <label [for]="id" class="form-field-label">
+        {{label}}{{!required ? '(optional)' : ''}}
+    </label>
+    @for (option of options; track $index) {
+        <label [attr.for]="id + '-' + option.value" class="radio-label">
+            <input
+                [attr.id]="id ? id + '-' + option.value : null"
+                type="radio"
+                [name]="id"
+                [value]="option.value"
+                [checked]="value === option.value"
+                [attr.disabled]="disabled ? disabled : null"
+                [attr.required]="required ? required : null"
+                (change)="selectOption(option.value)"
+                class="form-field-radio-group {{disabled ? 'is-disabled' : ''}}"/>
+                {{option.label}}
+        </label>
+    }
+</div>

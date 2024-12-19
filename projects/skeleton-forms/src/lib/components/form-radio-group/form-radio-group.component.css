@@ -1,0 +1,15 @@
+:host {
+  display: block;
+}
+
+.form-field {
+  display: flex;
+
+  &.direction-horizontal {
+    flex-direction: row;
+  }
+
+  &.direction.vertical {
+    flex-direction: column;
+  }
+}

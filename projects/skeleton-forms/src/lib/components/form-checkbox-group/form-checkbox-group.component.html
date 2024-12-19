@@ -1,0 +1,19 @@
+<div class="form-field direction-{{direction}}">
+    <label [for]="id" class="form-field-label">
+        {{label}}{{!required ? '(optional)' : ''}}
+    </label>
+    @for (option of options; track $index) {
+        <label [attr.for]="id + '-' + option.value" class="checkbox-label">
+            <input
+                [attr.id]="id ? id + '-' + option.value : null"
+                type="checkbox"
+                [name]="id + '-' + option.value"
+                [value]="option.value"
+                [checked]="value.includes(option.value)"
+                [attr.disabled]="disabled ? disabled : null"
+                [attr.required]="required ? required : null"
+                (change)="selectOption(option.value, $event)"
+                class="form-field-checkbox-group {{disabled ? 'is-disabled' : ''}}"/>
+        </label>
+    }
+</div>

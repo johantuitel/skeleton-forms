@@ -1,0 +1,18 @@
+<div class="form-field">
+    <label [for]="id" class="form-field-label">
+        {{label}}{{!required ? '(optional)' : ''}}
+    </label>
+    <textarea 
+        [attr.id]="id ? id : null"
+        [attr.rows]="rows"
+        [attr.cols]="cols"
+        type="textarea"
+        [placeholder]="placeholder"
+        [(ngModel)]="value"
+        [attr.disabled]="disabled ? disabled : null"
+        [attr.required]="required ? required : null"
+        (input)="onChange(value)"
+        (blur)="onTouched()"
+        class="form-field-textarea {{disabled ? 'disabled' : ''}}">
+    </textarea>
+</div>

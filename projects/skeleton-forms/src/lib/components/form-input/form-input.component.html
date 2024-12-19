@@ -1,0 +1,15 @@
+<div class="form-field">
+    <label [for]="id" class="form-field-label">
+        {{label}}{{!required ? '(optional)' : ''}}
+    </label>
+    <input 
+        [attr.id]="id ? id : null"
+        [type]="type"
+        [placeholder]="placeholder"
+        [(ngModel)]="value"
+        [attr.disabled]="disabled ? disabled : null"
+        [attr.required]="required ? required : null"
+        (input)="onChange(value)"
+        (blur)="onTouched()"
+        class="form-field-input {{disabled ? 'disabled' : ''}}"/>
+</div>

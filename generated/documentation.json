@@ -1,0 +1,2066 @@
+{
+    "pipes": [],
+    "interfaces": [
+        {
+            "name": "FormCheckboxOption",
+            "id": "interface-FormCheckboxOption-2b4931553c7f76338481c23669a72e2eab71bf32e2d20556596b4b5c2d7450796a7382d6299ed2aa272899504a082cda30ce2bf92b65de8dedf3bf511cff1414",
+            "file": "projects/skeleton-forms/src/lib/components/form-checkbox-group/form-checkbox.option.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface FormCheckboxOption {\r\n    value: string;\r\n    label: string;\r\n    disabled?: boolean;\r\n}",
+            "properties": [
+                {
+                    "name": "disabled",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 4
+                },
+                {
+                    "name": "label",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                },
+                {
+                    "name": "value",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 171,
+            "methods": [],
+            "extends": []
+        },
+        {
+            "name": "FormRadioOption",
+            "id": "interface-FormRadioOption-3b9b43979b8f08336aea1da7c68b9a11260103e54d47ca602dd329c8b60e60be6380e33a9919e7938c51e866dc6e11f8ccab1d807dd7c17a3499fe1dc570c72a",
+            "file": "projects/skeleton-forms/src/lib/components/form-radio-group/form-radio.option.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface FormRadioOption {\r\n  label: string;\r\n  value: string;\r\n  disabled?: boolean;\r\n}",
+            "properties": [
+                {
+                    "name": "disabled",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 4
+                },
+                {
+                    "name": "label",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "value",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 171,
+            "methods": [],
+            "extends": []
+        },
+        {
+            "name": "FormSelectOption",
+            "id": "interface-FormSelectOption-694576226895efb8359a7c620d8d08e7628c3e426bb83833ff106d4b1248ad7226582251906e201a698c32be9ae25f217f5bd8f278de91ccb9fb59d25449a3eb",
+            "file": "projects/skeleton-forms/src/lib/components/form-select/form-select.option.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface FormSelectOption {\r\n  label: string;\r\n  value: string;\r\n}\r\n",
+            "properties": [
+                {
+                    "name": "label",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "value",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 171,
+            "methods": [],
+            "extends": []
+        }
+    ],
+    "injectables": [],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "FormCheckboxGroupComponent",
+            "id": "component-FormCheckboxGroupComponent-3c73016716b13e799ab6b33a4e90640c55d1e7ebcc1c7cc6944a0de446e61296620c1930a79cbe74a71cfa8a349551fcb7375d3686ebf3328f74f48bc1da2dee",
+            "file": "projects/skeleton-forms/src/lib/components/form-checkbox-group/form-checkbox-group.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [
+                {
+                    "name": "{\n    provide: NG_VALUE_ACCESSOR, multi: true, useExisting: forwardRef(() => FormCheckboxGroupComponent)\n}",
+                    "type": "component"
+                }
+            ],
+            "selector": "app-form-checkbox-group",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./form-checkbox-group.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "direction",
+                    "defaultValue": "'horizontal'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 32,
+                    "type": "\"horizontal\" | \"vertical\"",
+                    "decorators": []
+                },
+                {
+                    "name": "disabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 31,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "required": true,
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "optional": false,
+                    "line": 28,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "required": true,
+                    "name": "label",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "optional": false,
+                    "line": 29,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "options",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 33,
+                    "type": "Array<FormCheckboxOption>",
+                    "decorators": []
+                },
+                {
+                    "name": "required",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 30,
+                    "type": "boolean",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "changeDetectionRef",
+                    "defaultValue": "inject(ChangeDetectorRef)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 26,
+                    "modifierKind": [
+                        123,
+                        148
+                    ]
+                },
+                {
+                    "name": "onChange",
+                    "defaultValue": "() => {...}",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 36
+                },
+                {
+                    "name": "onTouched",
+                    "defaultValue": "() => {...}",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 37
+                },
+                {
+                    "name": "value",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Array<string>",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 35
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "registerOnChange",
+                    "args": [
+                        {
+                            "name": "fn",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 44,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "fn",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "registerOnTouched",
+                    "args": [
+                        {
+                            "name": "fn",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 48,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "fn",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "selectOption",
+                    "args": [
+                        {
+                            "name": "value",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "event",
+                            "type": "Event",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 56,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "value",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "event",
+                            "type": "Event",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "setDisabledState",
+                    "args": [
+                        {
+                            "name": "isDisabled",
+                            "type": "boolean",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": true,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 52,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "isDisabled",
+                            "type": "boolean",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "writeValue",
+                    "args": [
+                        {
+                            "name": "obj",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 39,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "obj",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "FormsModule",
+                    "type": "module"
+                },
+                {
+                    "name": "ReactiveFormsModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, forwardRef, inject } from '@angular/core';\nimport { ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';\nimport { FormCheckboxOption } from './form-checkbox.option';\n\n@Component({\n  selector: 'app-form-checkbox-group',\n  standalone: true,\n  imports: [\n    CommonModule,\n    FormsModule,\n    ReactiveFormsModule\n  ],\n  templateUrl: './form-checkbox-group.component.html',\n  styleUrl: './form-checkbox-group.component.css',\n  providers: [\n    {\n      provide: NG_VALUE_ACCESSOR,\n      multi: true,\n      useExisting: forwardRef(() => FormCheckboxGroupComponent)\n    }\n  ],\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class FormCheckboxGroupComponent implements ControlValueAccessor {\n  private readonly changeDetectionRef = inject(ChangeDetectorRef);\n  \n  @Input({required: true}) id!: string;\n  @Input({required: true}) label!: string;\n  @Input() required = false;\n  @Input() disabled = false;\n  @Input() direction: 'horizontal' |'vertical' = 'horizontal';\n  @Input() options: Array<FormCheckboxOption> = [];\n  \n  value: Array<string> = [];\n  onChange: any = (value: any) => {};\n  onTouched: any = () => {};\n\n  writeValue(obj: any): void {\n    this.value = Array.isArray(obj) ? obj : [];\n    this.changeDetectionRef.markForCheck();\n  }\n\n  registerOnChange(fn: any): void {\n    this.onChange = fn;\n  }\n\n  registerOnTouched(fn: any): void {\n    this.onTouched = fn;\n  }\n\n  setDisabledState?(isDisabled: boolean): void {\n    this.disabled = isDisabled;\n  }\n\n  selectOption(value: any, event: Event): void {\n    if (!this.disabled) {\n      const inputElement = event.target as HTMLInputElement;\n      const isChecked = inputElement.checked;\n      if (isChecked) {\n        this.value = [...this.value, value];\n      } else {\n        this.value = this.value.filter(v => v! == value);\n      }\n      this.onChange(this.value);\n      this.onTouched();\n    }\n  }\n}\n",
+            "styleUrl": "./form-checkbox-group.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "implements": [
+                "ControlValueAccessor"
+            ],
+            "templateData": "<div class=\"form-field direction-{{direction}}\">\r\n    <label [for]=\"id\" class=\"form-field-label\">\r\n        {{label}}{{!required ? '(optional)' : ''}}\r\n    </label>\r\n    @for (option of options; track $index) {\r\n        <label [attr.for]=\"id + '-' + option.value\" class=\"checkbox-label\">\r\n            <input\r\n                [attr.id]=\"id ? id + '-' + option.value : null\"\r\n                type=\"checkbox\"\r\n                [name]=\"id + '-' + option.value\"\r\n                [value]=\"option.value\"\r\n                [checked]=\"value.includes(option.value)\"\r\n                [attr.disabled]=\"disabled ? disabled : null\"\r\n                [attr.required]=\"required ? required : null\"\r\n                (change)=\"selectOption(option.value, $event)\"\r\n                class=\"form-field-checkbox-group {{disabled ? 'is-disabled' : ''}}\"/>\r\n        </label>\r\n    }\r\n</div>"
+        },
+        {
+            "name": "FormInputComponent",
+            "id": "component-FormInputComponent-eb557110d1fc68a508af7da0cd261e7bd60eaefdfbe92f1b11b46270e7748c6d18c878d0bdf1a231d8290cb2a52af9b71339977a353e8ee0d947df1b8e261d2c",
+            "file": "projects/skeleton-forms/src/lib/components/form-input/form-input.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [
+                {
+                    "name": "{\n    provide: NG_VALUE_ACCESSOR, multi: true, useExisting: forwardRef(() => FormInputComponent)\n}",
+                    "type": "component"
+                }
+            ],
+            "selector": "app-form-input",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./form-input.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "disabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 29,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "required": true,
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "optional": false,
+                    "line": 26,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "required": true,
+                    "name": "label",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "optional": false,
+                    "line": 27,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "placeholder",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 30,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "required",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 28,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "type",
+                    "defaultValue": "'text'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 31,
+                    "type": "\"text\" | \"zipcode\" | \"number\" | \"image\" | \"email\" | \"password\" | \"tel\" | \"mobile\" | \"url\" | \"color\" | \"date\" | \"time\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "onChange",
+                    "defaultValue": "() => {...}",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 34
+                },
+                {
+                    "name": "onTouched",
+                    "defaultValue": "() => {...}",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 35
+                },
+                {
+                    "name": "value",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 33
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "registerOnChange",
+                    "args": [
+                        {
+                            "name": "fn",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 42,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "fn",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "registerOnTouched",
+                    "args": [
+                        {
+                            "name": "fn",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 46,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "fn",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "setDisabledState",
+                    "args": [
+                        {
+                            "name": "isDisabled",
+                            "type": "boolean",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": true,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 50,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "isDisabled",
+                            "type": "boolean",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "writeValue",
+                    "args": [
+                        {
+                            "name": "obj",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 38,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "obj",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "FormsModule",
+                    "type": "module"
+                },
+                {
+                    "name": "ReactiveFormsModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { ChangeDetectionStrategy, Component, Input, forwardRef } from '@angular/core';\nimport { ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';\n\n@Component({\n  selector: 'app-form-input',\n  standalone: true,\n  imports: [\n    CommonModule,\n    FormsModule,\n    ReactiveFormsModule\n  ],\n  templateUrl: './form-input.component.html',\n  styleUrl: './form-input.component.css',\n  providers: [\n    {\n      provide: NG_VALUE_ACCESSOR,\n      multi: true,\n      useExisting: forwardRef(() => FormInputComponent)\n    }\n  ],\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class FormInputComponent implements ControlValueAccessor {\n    \n  @Input({required: true}) id!: string;\n  @Input({required: true}) label!: string;\n  @Input() required = false;\n  @Input() disabled = false;\n  @Input() placeholder = '';\n  @Input() type: 'text' | 'zipcode' | 'number' | 'image' | 'email' | 'password' | 'tel' | 'mobile' | 'url' | 'color' | 'date' | 'time' = 'text';\n\n  value!: string;\n  onChange: any = (value: any) => {};\n  onTouched: any = () => {};\n\n\n  writeValue(obj: any): void {\n    this.value = obj;\n  }\n\n  registerOnChange(fn: any): void {\n    this.onChange = fn;\n  }\n\n  registerOnTouched(fn: any): void {\n    this.onTouched = fn;\n  }\n\n  setDisabledState?(isDisabled: boolean): void {\n    this.disabled = isDisabled;\n  }\n}\n",
+            "styleUrl": "./form-input.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "implements": [
+                "ControlValueAccessor"
+            ],
+            "templateData": "<div class=\"form-field\">\r\n    <label [for]=\"id\" class=\"form-field-label\">\r\n        {{label}}{{!required ? '(optional)' : ''}}\r\n    </label>\r\n    <input \r\n        [attr.id]=\"id ? id : null\"\r\n        [type]=\"type\"\r\n        [placeholder]=\"placeholder\"\r\n        [(ngModel)]=\"value\"\r\n        [attr.disabled]=\"disabled ? disabled : null\"\r\n        [attr.required]=\"required ? required : null\"\r\n        (input)=\"onChange(value)\"\r\n        (blur)=\"onTouched()\"\r\n        class=\"form-field-input {{disabled ? 'disabled' : ''}}\"/>\r\n</div>"
+        },
+        {
+            "name": "FormRadioGroupComponent",
+            "id": "component-FormRadioGroupComponent-61372227cf9428c970a58850786c93c5c47863a63aa00b420151dc9e55cb65e9033d10a2523ab78861f7876bc80de80d66878e585dcc38f84f2f7d3b8b38713a",
+            "file": "projects/skeleton-forms/src/lib/components/form-radio-group/form-radio-group.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [
+                {
+                    "name": "{\n    provide: NG_VALUE_ACCESSOR, multi: true, useExisting: forwardRef(() => FormRadioGroupComponent)\n}",
+                    "type": "component"
+                }
+            ],
+            "selector": "app-form-radio-group",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./form-radio-group.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "direction",
+                    "defaultValue": "'horizontal'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 32,
+                    "type": "\"horizontal\" | \"vertical\"",
+                    "decorators": []
+                },
+                {
+                    "name": "disabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 31,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "required": true,
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "optional": false,
+                    "line": 28,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "required": true,
+                    "name": "label",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "optional": false,
+                    "line": 29,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "options",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 33,
+                    "type": "Array<FormRadioOption>",
+                    "decorators": []
+                },
+                {
+                    "name": "required",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 30,
+                    "type": "boolean",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "changeDetectionRef",
+                    "defaultValue": "inject(ChangeDetectorRef)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 26,
+                    "modifierKind": [
+                        123,
+                        148
+                    ]
+                },
+                {
+                    "name": "onChange",
+                    "defaultValue": "() => {...}",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 36
+                },
+                {
+                    "name": "onTouched",
+                    "defaultValue": "() => {...}",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 37
+                },
+                {
+                    "name": "value",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 35
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "registerOnChange",
+                    "args": [
+                        {
+                            "name": "fn",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 44,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "fn",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "registerOnTouched",
+                    "args": [
+                        {
+                            "name": "fn",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 48,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "fn",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "selectOption",
+                    "args": [
+                        {
+                            "name": "value",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 56,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "value",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "setDisabledState",
+                    "args": [
+                        {
+                            "name": "isDisabled",
+                            "type": "boolean",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": true,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 52,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "isDisabled",
+                            "type": "boolean",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "writeValue",
+                    "args": [
+                        {
+                            "name": "obj",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 39,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "obj",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "FormsModule",
+                    "type": "module"
+                },
+                {
+                    "name": "ReactiveFormsModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, forwardRef, inject } from '@angular/core';\nimport { ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';\nimport { FormRadioOption } from './form-radio.option';\n\n@Component({\n  selector: 'app-form-radio-group',\n  standalone: true,\n  imports: [\n    CommonModule,\n    FormsModule,\n    ReactiveFormsModule\n  ],\n  templateUrl: './form-radio-group.component.html',\n  styleUrl: './form-radio-group.component.css',\n  providers: [\n    {\n      provide: NG_VALUE_ACCESSOR,\n      multi: true,\n      useExisting: forwardRef(() => FormRadioGroupComponent)\n    }\n  ],\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class FormRadioGroupComponent implements ControlValueAccessor {\n  private readonly changeDetectionRef = inject(ChangeDetectorRef);\n  \n  @Input({required: true}) id!: string;\n  @Input({required: true}) label!: string;\n  @Input() required = false;\n  @Input() disabled = false;\n  @Input() direction: 'horizontal' |'vertical' = 'horizontal';\n  @Input() options: Array<FormRadioOption> = [];\n  \n  value!: string;\n  onChange: any = (value: any) => {};\n  onTouched: any = () => {};\n\n  writeValue(obj: any): void {\n    this.value = obj\n    this.changeDetectionRef.markForCheck();\n  }\n\n  registerOnChange(fn: any): void {\n    this.onChange = fn;\n  }\n\n  registerOnTouched(fn: any): void {\n    this.onTouched = fn;\n  }\n\n  setDisabledState?(isDisabled: boolean): void {\n    this.disabled = isDisabled;\n  }\n\n  selectOption(value: any): void {\n    if (!this.disabled) {\n      this.value = value;\n      this.onChange(value);\n      this.onTouched();\n    }\n  }\n}\n",
+            "styleUrl": "./form-radio-group.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "implements": [
+                "ControlValueAccessor"
+            ],
+            "templateData": "<div class=\"form-field direction-{{direction}}\">\r\n    <label [for]=\"id\" class=\"form-field-label\">\r\n        {{label}}{{!required ? '(optional)' : ''}}\r\n    </label>\r\n    @for (option of options; track $index) {\r\n        <label [attr.for]=\"id + '-' + option.value\" class=\"radio-label\">\r\n            <input\r\n                [attr.id]=\"id ? id + '-' + option.value : null\"\r\n                type=\"radio\"\r\n                [name]=\"id\"\r\n                [value]=\"option.value\"\r\n                [checked]=\"value.includes(option.value)\"\r\n                [attr.disabled]=\"disabled ? disabled : null\"\r\n                [attr.required]=\"required ? required : null\"\r\n                (change)=\"selectOption(option.value)\"\r\n                class=\"form-field-radio-group {{disabled ? 'is-disabled' : ''}}\"/>\r\n                {{option.label}}\r\n        </label>\r\n    }\r\n</div>"
+        },
+        {
+            "name": "FormSelectComponent",
+            "id": "component-FormSelectComponent-8c2ae2c056da933e69931db1564a0793fb22b338f88dddf4ca3e6d6ad84abb86a16ecf33fbc693ff1c0c5a5babedd15fad1e63db7faf75ae020f8b2cd5919ea7",
+            "file": "projects/skeleton-forms/src/lib/components/form-select/form-select.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [
+                {
+                    "name": "{\n    provide: NG_VALUE_ACCESSOR, multi: true, useExisting: forwardRef(() => FormSelectComponent)\n}",
+                    "type": "component"
+                }
+            ],
+            "selector": "app-form-select",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./form-select.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "disabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 30,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "firstOption",
+                    "defaultValue": "'Select an option'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 31,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "required": true,
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "optional": false,
+                    "line": 27,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "required": true,
+                    "name": "label",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "optional": false,
+                    "line": 28,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "options",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 32,
+                    "type": "Array<FormSelectOption>",
+                    "decorators": []
+                },
+                {
+                    "name": "required",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 29,
+                    "type": "boolean",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "onChange",
+                    "defaultValue": "() => {...}",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 35
+                },
+                {
+                    "name": "onTouched",
+                    "defaultValue": "() => {...}",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 36
+                },
+                {
+                    "name": "value",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 34
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "registerOnChange",
+                    "args": [
+                        {
+                            "name": "fn",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 42,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "fn",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "registerOnTouched",
+                    "args": [
+                        {
+                            "name": "fn",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 46,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "fn",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "selectOption",
+                    "args": [
+                        {
+                            "name": "value",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 54,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "value",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "setDisabledState",
+                    "args": [
+                        {
+                            "name": "isDisabled",
+                            "type": "boolean",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": true,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 50,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "isDisabled",
+                            "type": "boolean",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "writeValue",
+                    "args": [
+                        {
+                            "name": "obj",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 38,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "obj",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "FormsModule",
+                    "type": "module"
+                },
+                {
+                    "name": "ReactiveFormsModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { ChangeDetectionStrategy, Component, Input, forwardRef } from '@angular/core';\nimport { ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';\nimport { FormSelectOption } from './form-select.option';\n\n@Component({\n  selector: 'app-form-select',\n  standalone: true,\n  imports: [\n    CommonModule,\n    FormsModule,\n    ReactiveFormsModule\n  ],\n  templateUrl: './form-select.component.html',\n  styleUrl: './form-select.component.css',\n  providers: [\n    {\n      provide: NG_VALUE_ACCESSOR,\n      multi: true,\n      useExisting: forwardRef(() => FormSelectComponent)\n    }\n  ],\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class FormSelectComponent implements ControlValueAccessor {\n  \n  @Input({required: true}) id!: string;\n  @Input({required: true}) label!: string;\n  @Input() required = false;\n  @Input() disabled = false;\n  @Input() firstOption = 'Select an option';\n  @Input() options: Array<FormSelectOption> = [];\n  \n  value!: string;\n  onChange: any = (value: any) => {};\n  onTouched: any = () => {};\n\n  writeValue(obj: any): void {\n    this.value = obj\n  }\n\n  registerOnChange(fn: any): void {\n    this.onChange = fn;\n  }\n\n  registerOnTouched(fn: any): void {\n    this.onTouched = fn;\n  }\n\n  setDisabledState?(isDisabled: boolean): void {\n    this.disabled = isDisabled;\n  }\n\n  selectOption(value: any): void {\n    if (!this.disabled) {\n      this.value = value;\n      this.onChange(this.value);\n      this.onTouched();\n    }\n  }\n}\n\n",
+            "styleUrl": "./form-select.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "implements": [
+                "ControlValueAccessor"
+            ],
+            "templateData": "<div class=\"form-field\">\r\n    <label [for]=\"id\" class=\"form-field-label\">\r\n        {{label}}{{!required ? '(optional)' : ''}}\r\n    </label>\r\n    <select\r\n        [attr.id]=\"id ? id : null\"\r\n        [(ngModel)]=\"value\"\r\n        (change)=\"onChange(value)\"\r\n        [attr.disabled]=\"disabled ? disabled : null\"\r\n        [attr.required]=\"required ? required : null\"\r\n        class=\"form-select {{disabled ? 'is-disabled' : ''}}\">\r\n        <option value=\"\">{{firstOption}}</option>\r\n        @for (option of options; track $index) {\r\n            <option [value]=\"option.value\" [selected]=\"value === option.value\">{{option.label}}</option>\r\n        }\r\n    </select>\r\n</div>"
+        },
+        {
+            "name": "FormSwitchComponent",
+            "id": "component-FormSwitchComponent-77e0267327dc11b1fbdd396cc127e5fa541a077d3cc8c9102cbaba7b09b6834b2633175c96fae4cebe67f2381c0a6e3b984eb34fd0c0ef567c52e2286c6df133",
+            "file": "projects/skeleton-forms/src/lib/components/form-switch/form-switch.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-form-switch",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<p>form-switch works!</p>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { ChangeDetectionStrategy, Component } from '@angular/core';\n\n@Component({\n  selector: 'app-form-switch',\n  standalone: true,\n  imports: [\n    CommonModule,\n  ],\n  template: `<p>form-switch works!</p>`,\n  styleUrl: './form-switch.component.css',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class FormSwitchComponent { }\n",
+            "styleUrl": "./form-switch.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": []
+        },
+        {
+            "name": "FormTextareaComponent",
+            "id": "component-FormTextareaComponent-3c25aaf41dac65d2d198395503552f8981e744721aa6344b45ed734b0ff31a9d550909115d44d8d7f1d2d26c3b73761e6e2353a261336e361dff20f8e1371a4c",
+            "file": "projects/skeleton-forms/src/lib/components/form-textarea/form-textarea.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [
+                {
+                    "name": "{\n    provide: NG_VALUE_ACCESSOR, multi: true, useExisting: forwardRef(() => FormTextareaComponent)\n}",
+                    "type": "component"
+                }
+            ],
+            "selector": "app-form-textarea",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./form-textarea.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "cols",
+                    "defaultValue": "50",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 29,
+                    "type": "number",
+                    "decorators": []
+                },
+                {
+                    "name": "disabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 31,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "required": true,
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "optional": false,
+                    "line": 26,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "required": true,
+                    "name": "label",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "optional": false,
+                    "line": 27,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "placeholder",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 32,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "required",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 30,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "rows",
+                    "defaultValue": "5",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 28,
+                    "type": "number",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "onChange",
+                    "defaultValue": "() => {...}",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 35
+                },
+                {
+                    "name": "onTouched",
+                    "defaultValue": "() => {...}",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 36
+                },
+                {
+                    "name": "value",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 34
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "registerOnChange",
+                    "args": [
+                        {
+                            "name": "fn",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 43,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "fn",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "registerOnTouched",
+                    "args": [
+                        {
+                            "name": "fn",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 47,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "fn",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "setDisabledState",
+                    "args": [
+                        {
+                            "name": "isDisabled",
+                            "type": "boolean",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": true,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 51,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "isDisabled",
+                            "type": "boolean",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "writeValue",
+                    "args": [
+                        {
+                            "name": "obj",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 39,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "obj",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "FormsModule",
+                    "type": "module"
+                },
+                {
+                    "name": "ReactiveFormsModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { ChangeDetectionStrategy, Component, Input, forwardRef } from '@angular/core';\nimport { ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';\n\n@Component({\n  selector: 'app-form-textarea',\n  standalone: true,\n  imports: [\n    CommonModule,\n    FormsModule,\n    ReactiveFormsModule\n  ],\n  templateUrl: './form-textarea.component.html',\n  styleUrl: './form-textarea.component.css',\n  providers: [\n    {\n      provide: NG_VALUE_ACCESSOR,\n      multi: true,\n      useExisting: forwardRef(() => FormTextareaComponent)\n    }\n  ],\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class FormTextareaComponent implements ControlValueAccessor {\n    \n  @Input({required: true}) id!: string;\n  @Input({required: true}) label!: string;\n  @Input() rows = 5;\n  @Input() cols = 50;\n  @Input() required = false;\n  @Input() disabled = false;\n  @Input() placeholder = '';\n\n  value!: string;\n  onChange: any = (value: any) => {};\n  onTouched: any = () => {};\n\n\n  writeValue(obj: any): void {\n    this.value = obj;\n  }\n\n  registerOnChange(fn: any): void {\n    this.onChange = fn;\n  }\n\n  registerOnTouched(fn: any): void {\n    this.onTouched = fn;\n  }\n\n  setDisabledState?(isDisabled: boolean): void {\n    this.disabled = isDisabled;\n  }\n}\n",
+            "styleUrl": "./form-textarea.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "implements": [
+                "ControlValueAccessor"
+            ],
+            "templateData": "<div class=\"form-field\">\r\n    <label [for]=\"id\" class=\"form-field-label\">\r\n        {{label}}{{!required ? '(optional)' : ''}}\r\n    </label>\r\n    <textarea \r\n        [attr.id]=\"id ? id : null\"\r\n        [attr.rows]=\"rows\"\r\n        [attr.cols]=\"cols\"\r\n        type=\"textarea\"\r\n        [placeholder]=\"placeholder\"\r\n        [(ngModel)]=\"value\"\r\n        [attr.disabled]=\"disabled ? disabled : null\"\r\n        [attr.required]=\"required ? required : null\"\r\n        (input)=\"onChange(value)\"\r\n        (blur)=\"onTouched()\"\r\n        class=\"form-field-textarea {{disabled ? 'disabled' : ''}}\">\r\n    </textarea>\r\n</div>"
+        }
+    ],
+    "modules": [],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "checkboxGroup",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/skeleton-forms/src/lib/components/form-checkbox-group/form-checkbox-group.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "TFormCheckboxGroupComponentTemplate",
+                "defaultValue": "{\r\n    args: {\r\n        id: 'checkbox-group',\r\n        label: 'Checkbox Group',\r\n        options: [\r\n            { label: 'Option 1', value: 'option1' },\r\n            { label: 'Option 2', value: 'option2' },\r\n            { label: 'Option 3', value: 'option3' },\r\n        ],\r\n    },\r\n}"
+            },
+            {
+                "name": "input",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/skeleton-forms/src/lib/components/form-input/form-input.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "TFormInputComponentTemplate",
+                "defaultValue": "{\r\n    args: {\r\n        id: 'form-input',\r\n        label: 'Form Input',\r\n    },\r\n}"
+            },
+            {
+                "name": "radioGroup",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/skeleton-forms/src/lib/components/form-radio-group/form-radio-group.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "TFormRadioGroupComponentTemplate",
+                "defaultValue": "{\r\n    args: {\r\n        id: 'radio-group',\r\n        label: 'Radio Group',\r\n        options: [\r\n            { label: 'Option 1', value: 'option1' },\r\n            { label: 'Option 2', value: 'option2' },\r\n            { label: 'Option 3', value: 'option3' },\r\n        ],\r\n    },\r\n}"
+            },
+            {
+                "name": "select",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/skeleton-forms/src/lib/components/form-select/form-select.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "TFormSelectComponentTemplate",
+                "defaultValue": "{\r\n    args: {\r\n        id: 'form-select',\r\n        label: 'Form Selecrt',\r\n        options: [\r\n            { label: 'Option 1', value: 'option1' },\r\n            { label: 'Option 2', value: 'option2' },\r\n            { label: 'Option 3', value: 'option3' },\r\n        ],\r\n    },\r\n}"
+            },
+            {
+                "name": "textarea",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/skeleton-forms/src/lib/components/form-textarea/form-textarea.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "TFormTextareaComponentTemplate",
+                "defaultValue": "{\r\n    args: {\r\n        id: 'form-textarea',\r\n        label: 'Form Textarea',\r\n    },\r\n}"
+            }
+        ],
+        "functions": [],
+        "typealiases": [
+            {
+                "name": "TFormCheckboxGroupComponentTemplate",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<FormCheckboxGroupComponent>",
+                "file": "projects/skeleton-forms/src/lib/components/form-checkbox-group/form-checkbox-group.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "TFormInputComponentTemplate",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<FormInputComponent>",
+                "file": "projects/skeleton-forms/src/lib/components/form-input/form-input.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "TFormRadioGroupComponentTemplate",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<FormRadioGroupComponent>",
+                "file": "projects/skeleton-forms/src/lib/components/form-radio-group/form-radio-group.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "TFormSelectComponentTemplate",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<FormSelectComponent>",
+                "file": "projects/skeleton-forms/src/lib/components/form-select/form-select.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "TFormTextareaComponentTemplate",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<FormTextareaComponent>",
+                "file": "projects/skeleton-forms/src/lib/components/form-textarea/form-textarea.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            }
+        ],
+        "enumerations": [],
+        "groupedVariables": {
+            "projects/skeleton-forms/src/lib/components/form-checkbox-group/form-checkbox-group.component.stories.ts": [
+                {
+                    "name": "checkboxGroup",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/skeleton-forms/src/lib/components/form-checkbox-group/form-checkbox-group.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "TFormCheckboxGroupComponentTemplate",
+                    "defaultValue": "{\r\n    args: {\r\n        id: 'checkbox-group',\r\n        label: 'Checkbox Group',\r\n        options: [\r\n            { label: 'Option 1', value: 'option1' },\r\n            { label: 'Option 2', value: 'option2' },\r\n            { label: 'Option 3', value: 'option3' },\r\n        ],\r\n    },\r\n}"
+                }
+            ],
+            "projects/skeleton-forms/src/lib/components/form-input/form-input.component.stories.ts": [
+                {
+                    "name": "input",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/skeleton-forms/src/lib/components/form-input/form-input.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "TFormInputComponentTemplate",
+                    "defaultValue": "{\r\n    args: {\r\n        id: 'form-input',\r\n        label: 'Form Input',\r\n    },\r\n}"
+                }
+            ],
+            "projects/skeleton-forms/src/lib/components/form-radio-group/form-radio-group.component.stories.ts": [
+                {
+                    "name": "radioGroup",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/skeleton-forms/src/lib/components/form-radio-group/form-radio-group.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "TFormRadioGroupComponentTemplate",
+                    "defaultValue": "{\r\n    args: {\r\n        id: 'radio-group',\r\n        label: 'Radio Group',\r\n        options: [\r\n            { label: 'Option 1', value: 'option1' },\r\n            { label: 'Option 2', value: 'option2' },\r\n            { label: 'Option 3', value: 'option3' },\r\n        ],\r\n    },\r\n}"
+                }
+            ],
+            "projects/skeleton-forms/src/lib/components/form-select/form-select.component.stories.ts": [
+                {
+                    "name": "select",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/skeleton-forms/src/lib/components/form-select/form-select.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "TFormSelectComponentTemplate",
+                    "defaultValue": "{\r\n    args: {\r\n        id: 'form-select',\r\n        label: 'Form Selecrt',\r\n        options: [\r\n            { label: 'Option 1', value: 'option1' },\r\n            { label: 'Option 2', value: 'option2' },\r\n            { label: 'Option 3', value: 'option3' },\r\n        ],\r\n    },\r\n}"
+                }
+            ],
+            "projects/skeleton-forms/src/lib/components/form-textarea/form-textarea.component.stories.ts": [
+                {
+                    "name": "textarea",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/skeleton-forms/src/lib/components/form-textarea/form-textarea.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "TFormTextareaComponentTemplate",
+                    "defaultValue": "{\r\n    args: {\r\n        id: 'form-textarea',\r\n        label: 'Form Textarea',\r\n    },\r\n}"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {
+            "projects/skeleton-forms/src/lib/components/form-checkbox-group/form-checkbox-group.component.stories.ts": [
+                {
+                    "name": "TFormCheckboxGroupComponentTemplate",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<FormCheckboxGroupComponent>",
+                    "file": "projects/skeleton-forms/src/lib/components/form-checkbox-group/form-checkbox-group.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/skeleton-forms/src/lib/components/form-input/form-input.component.stories.ts": [
+                {
+                    "name": "TFormInputComponentTemplate",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<FormInputComponent>",
+                    "file": "projects/skeleton-forms/src/lib/components/form-input/form-input.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/skeleton-forms/src/lib/components/form-radio-group/form-radio-group.component.stories.ts": [
+                {
+                    "name": "TFormRadioGroupComponentTemplate",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<FormRadioGroupComponent>",
+                    "file": "projects/skeleton-forms/src/lib/components/form-radio-group/form-radio-group.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/skeleton-forms/src/lib/components/form-select/form-select.component.stories.ts": [
+                {
+                    "name": "TFormSelectComponentTemplate",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<FormSelectComponent>",
+                    "file": "projects/skeleton-forms/src/lib/components/form-select/form-select.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/skeleton-forms/src/lib/components/form-textarea/form-textarea.component.stories.ts": [
+                {
+                    "name": "TFormTextareaComponentTemplate",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<FormTextareaComponent>",
+                    "file": "projects/skeleton-forms/src/lib/components/form-textarea/form-textarea.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ]
+        }
+    },
+    "routes": [],
+    "coverage": {
+        "count": 0,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "projects/skeleton-forms/src/lib/components/form-checkbox-group/form-checkbox-group.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "checkboxGroup",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/skeleton-forms/src/lib/components/form-checkbox-group/form-checkbox-group.component.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "TFormCheckboxGroupComponentTemplate",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/skeleton-forms/src/lib/components/form-checkbox-group/form-checkbox-group.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FormCheckboxGroupComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/16",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/skeleton-forms/src/lib/components/form-checkbox-group/form-checkbox.option.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "FormCheckboxOption",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/skeleton-forms/src/lib/components/form-input/form-input.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "input",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/skeleton-forms/src/lib/components/form-input/form-input.component.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "TFormInputComponentTemplate",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/skeleton-forms/src/lib/components/form-input/form-input.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FormInputComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/14",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/skeleton-forms/src/lib/components/form-radio-group/form-radio-group.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "radioGroup",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/skeleton-forms/src/lib/components/form-radio-group/form-radio-group.component.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "TFormRadioGroupComponentTemplate",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/skeleton-forms/src/lib/components/form-radio-group/form-radio-group.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FormRadioGroupComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/16",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/skeleton-forms/src/lib/components/form-radio-group/form-radio.option.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "FormRadioOption",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/skeleton-forms/src/lib/components/form-select/form-select.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "select",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/skeleton-forms/src/lib/components/form-select/form-select.component.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "TFormSelectComponentTemplate",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/skeleton-forms/src/lib/components/form-select/form-select.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FormSelectComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/15",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/skeleton-forms/src/lib/components/form-select/form-select.option.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "FormSelectOption",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/skeleton-forms/src/lib/components/form-switch/form-switch.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FormSwitchComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/skeleton-forms/src/lib/components/form-textarea/form-textarea.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "textarea",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/skeleton-forms/src/lib/components/form-textarea/form-textarea.component.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "TFormTextareaComponentTemplate",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/skeleton-forms/src/lib/components/form-textarea/form-textarea.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FormTextareaComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/15",
+                "status": "low"
+            }
+        ]
+    }
+}
